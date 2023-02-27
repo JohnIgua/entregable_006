@@ -1,0 +1,39 @@
+.login{
+    background-color: var(--ultra-ligth-gray);
+    min-height: calc(100vh - 42px);
+    display: grid;
+    place-content: center;
+}
+
+.login_logged_container{    
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: min(90vw, 400px);
+}
+
+.login_logged_icon{
+    font-size: 80px;
+    color: var(--gray);
+}
+
+.login_logged_name{
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.login_logged_btn{
+    border: none;
+    color: white;
+    background-color: var(--primary);
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 200ms ease;
+}
+
+.login_logged_btn :hover{
+    background-color: rgb(248, 142, 142);
+}
