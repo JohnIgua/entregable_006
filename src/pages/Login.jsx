@@ -45,8 +45,8 @@ const Login = () => {
 
                 <div className='login_form_containerTest'>
                   <h4 className='login_form_titleTest'>Test data</h4>
-                  <div className='login_form_emailTest'><i className='bx bx-envelope'></i></div>
-                  <div className='login_form_passwordTest'><i className='bx bx-lock-alt'></i></div>
+                  <div className='login_form_emailTest'><i className='bx bx-envelope'></i>  john@gmail.com</div>
+                  <div className='login_form_passwordTest'><i className='bx bx-lock-alt'>  john1234</i></div>
                 </div>
 
                 <div className='login_form_divInfo'>
@@ -62,7 +62,7 @@ const Login = () => {
                 <button className='login_form_btn'>Login</button>
 
                 <p className='login_form_footerText'>
-                  Don't, have an account<span>Sign Up</span>
+                  Don't, have an account <span>Sign Up</span>
                 </p>
 
             </form>)

@@ -37,3 +37,71 @@
 .login_logged_btn :hover{
     background-color: rgb(248, 142, 142);
 }
+
+.login_form_container{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: var(--dark-gray);
+    width: min(90vw, 350px);
+}
+
+.login_form_title{
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.login_form_containerTest{
+    background-color: #d7f4fc;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.login_form_titleTest{
+    text-align: center;
+    font-size: 19px;
+}
+
+.login_form_emailTest, .login_form_passwordTest{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.login_form_divInfo{
+    margin-top: 20px;
+}
+
+.login_form_label{
+    display: block;
+}
+
+.login_form_input{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--light-gray);
+    outline: none;
+    margin-top: 3px;
+    font-size: 15px;
+}
+
+.login_form_btn{
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    margin: 30px 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.login_form_footerText{
+    font-size: 12px;
+}
+
+.login_form_footerText span{
+    color: #3cb2f9;
+    cursor: pointer;
+}

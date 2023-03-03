@@ -2,7 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 10px 10px;
+    background-color: rgb(239, 242, 243);
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .navbar_name, .navbar_link{
@@ -27,13 +31,14 @@
 
 .navbar_link span{
     background-color: var(--primary);
+    font-size: 17px;
     color: white;
     height: 25px;
     aspect-ratio: 1;
     font-weight: bold;
     position: relative;
-    right: -3px;
-    bottom: -5px;
+    right: 12px;
+    bottom: 10px;
     display: grid;
     place-content: center;
     border-radius: 50%;

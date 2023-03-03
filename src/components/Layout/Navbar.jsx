@@ -14,7 +14,7 @@ const {token} = useSelector(store => store.userInfo)
         <div className='navbar_containerLinks'>
             <Link className='navbar_link' to="/login"><i className='bx bx-user'></i></Link>
             <Link className='navbar_link' to="/purchases"><i className='bx bx-box'></i></Link>
-            <Link className='navbar_link' to="/cart"><i className='bx bx-cart'></i><span>{token ? products.length : ""}</span></Link>
+            <Link className='navbar_link' to="/cart"><i className='bx bx-cart'></i>{token ? <span>{products.length}</span> : ""}</Link>
             {/*3ra linea: que no se vea dato despues de salir de seccion,
             trabajando con el stateInitial (si existe token)*/}
         </div>

@@ -1,0 +1,41 @@
+.purchaseContainer{
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    border-bottom: 1px solid var(--gray);
+    display: flex;
+    place-content: center;
+    padding: 20px;
+    height: 290px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.purchaseCard_img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.purchaseCard_img img{
+    display: block;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+    transition: opacity 400ms ease;
+}
+
+.firstContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.secondContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}

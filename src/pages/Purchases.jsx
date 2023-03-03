@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PurchaseCard from '../components/Purchases/PurchaseCard'
 import axiosEcommerce, { getConfig } from '../utils/configAxios'
-
+import "./styles/Purchases.css"
 
 const Purchases = () => {
 
@@ -23,10 +23,10 @@ const Purchases = () => {
   return (
     <main>
       <section>
-        <h3>
+        <h3 className='titlePurchases'>
           My Purchases
         </h3>
-        <section>
+        <section className='purchases_listProducts'>
         {purchases.map((purchase) => (
                     <PurchaseCard key={purchase.id} purchase={purchase} />               
         ))}

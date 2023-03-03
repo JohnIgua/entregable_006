@@ -1,4 +1,5 @@
 import React from 'react'
+import "./styles/PurchaseCard.css"
 
 const PurchaseCard = ({purchase}) => {
 
@@ -13,21 +14,21 @@ const formatDateDDMMYYYY  = (oldFormat) => {
 }
 
   return (
-    <article>
-                  <div>
-                    <div>
-                      <img src={purchase.product.images[0].url} alt="" />
+              <article className='purchaseContainer'>
+                  <div className='firstContent'>
+                    <div className='purchaseCard_img'>
+                      <img src={purchase.product.images[1].url} alt="" />
                     </div>
                     <h4>{purchase.product.title}</h4>
                   </div>
-                  <div>
+                  <div className='secondContent'> 
                     <h4>{formatDateDDMMYYYY(purchase.createdAt)}</h4>
                     <div>
-                      <h4>{purchase.quantity}</h4>
+                      <h4>Cantidad: {purchase.quantity}</h4>
                     </div>
-                    <h4>$ {purchase.product.price}</h4>
+                    <h4>Precio: $ {purchase.product.price}</h4>
                   </div>
-                </article>
+              </article>
   )
 }
 

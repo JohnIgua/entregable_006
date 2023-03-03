@@ -1,0 +1,85 @@
+.cartProductContainer{
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    border-bottom: 1px solid var(--gray);
+    display: flex;
+    place-content: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 280px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerImg{
+    width: 80%;
+    height: 80%;
+    display: flex;
+     justify-content: center;
+      align-items: center;      
+}
+
+.containerImg img{
+    display: block;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    flex-basis: 50%;
+}
+
+.firstDivision{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.secondDivision{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.containerQuantity{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.btnDelete{    
+    color: white;
+    background-color: var(--primary);
+    border-radius: 50%;
+    font-size: 15px;
+    border: none;
+    width: 30px;
+    aspect-ratio: 1;
+    cursor: pointer;
+}
+
+.containInferior{
+    display: flex;
+    flex-direction: row;
+}
+
+.less{
+    cursor: pointer;
+}
+
+.plus{
+    cursor: pointer;
+}

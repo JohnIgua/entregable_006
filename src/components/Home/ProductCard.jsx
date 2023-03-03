@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { addProductCart } from '../../store/slices/cart.slice'
+import "./styles/ProductCard.css"
 
 const ProductCard = ({ product }) => {
 
@@ -22,19 +23,21 @@ const ProductCard = ({ product }) => {
     }
 
   return (
-    <article onClick={handleClickProduct}>
-        <header>
-            <div>
+    <article className='productCard' onClick={handleClickProduct}>
+        <header className='productCard_header'>
+            <div className='productCard_img'>
                 <img src={product.images[0].url} alt="" />
+                <img src={product.images[1].url} alt="" />
 
             </div>
         </header>
-        <section>
-            <h4>{product.brand}</h4>
-            <h3>{product.title}</h3>
-            <h4>Price</h4>
-            <h3>{product.price}</h3>
-            <button onClick={handleClickAddProduct}>
+        <section className='productCard_info'>
+            <h4 className='productCard_brand'>{product.brand}</h4>
+            <h3 className='productCard_title'>{product.title}</h3>
+
+            <h4 className='productCard_priceTitle'>Price</h4>
+            <h3 className='productCard_price'>$ {product.price}</h3>
+            <button className='productCard_btn' onClick={handleClickAddProduct}>
                 <i className='bx bx-cart'></i></button>
         </section>
     </article>

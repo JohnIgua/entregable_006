@@ -1,0 +1,9 @@
+.Notification{
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 10px;
+    width: max-content;
+    border-radius: 5px;
+    position: absolute;
+    right: -100%;
+}

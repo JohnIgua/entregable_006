@@ -3,6 +3,7 @@ import axiosEcommerce, { getConfig } from "../../utils/configAxios";
 
 const initialState = {
     products: [], /*solo llega al estado lo agregado al carrito, ahora toca renderizar*/
+    error:false
 }
 
 const cartSlice = createSlice({
@@ -12,11 +13,12 @@ const cartSlice = createSlice({
         setProductsCartGlobal: (state, action) => {
             return {...state, products: action.payload}/*al estado que ya estaba se le 
             aumenta el action.payload desde aqui se va hasta la variable objeto vacio*/
-        }
+        },
+        setChangeErrorStatus: (state) => !state
     }
 })
 
-export const {setProductsCartGlobal} = cartSlice.actions /*aqui desestr el set*/
+export const {setProductsCartGlobal, setChangeErrorStatus} = cartSlice.actions /*aqui desestr el set*/
 
 export const getAllCartProducts = () => (dispatch) => {
     axiosEcommerce.get("/cart", getConfig())
@@ -28,7 +30,10 @@ export const getAllCartProducts = () => (dispatch) => {
 export const addProductCart = (data ) => (dispatch) => {
     axiosEcommerce.post("/cart", data, getConfig())
     .then((res) => dispatch(getAllCartProducts()))
-    .catch((err) => console.log(err))
+    .catch((err) => {
+        console.log(err)
+        console.log(err.response.data.error)
+    })
     /*se agrega en el carrito desde el boton carrito en el ProductCard, 
     Solo hace! la accion de agregar unidades al carro, la parte de visualizacion
     en el objeto products lo hace con getAllCartProducts*/
